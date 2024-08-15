@@ -1,0 +1,41 @@
+{% extends "blog/layout.html" %}
+{% load static %}
+{% block title %}Contact mon ecole{% endblock %}
+{% block content %}
+        <div class="background-image-1">
+            <img src="{% static "blog//img/secondaire/sc3.png" %}" alt="fond">
+
+        </div>
+        <section class="ministerial-orders animated">
+            <strong>
+                <p>Arrêté Ministériel N°0288/CAB/MIN-ETP/JNT/GBM/BBL/2016 DU 17/10/2016</p>
+                <p>Arrêté Ministériel N°MINESP/CABIN/0362/2017 du 26/01/2017</p>
+                <p>PROVINCE DU LUALABA</p>
+                <p>VILLE DE KOLWEZI</p>
+            </strong>
+        </section>
+
+        <main>
+                <section class="highlights animated">
+                    <h2>CONTACTEZ-NOUS</h2>
+                </section>
+                <section class="contact animated">
+                    <div class="logo">
+                        <img src="{% static "blog/img/s.png" %}" alt="Logo du site">
+                    </div>
+                    <form action="/contact/" method="POST">
+                        {% csrf_token %}
+                        {{ form }}
+                        
+                        <input type="submit" value="Submit">
+                        
+                    </form>
+                    <p>Contact : +243 99 08 26 667</p>
+                </section>
+                
+                <div class="loc">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7840.891689231075!2d25.510016649530026!3d-10.700053587831976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1979e5469c2f1dd3%3A0xff6ebecf1295479f!2sComplexe%20Scolaire%20La%20GRANDEUR!5e0!3m2!1sfr!2scd!4v1721424661439!5m2!1sfr!2scd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+        </main>
+
+{% endblock %}

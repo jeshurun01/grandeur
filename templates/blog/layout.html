@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}La Grandeur{% endblock %}</title>
+    <link rel="stylesheet" href=" {% static "bootstrap.min.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "blog/css/styles.css" %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <img src="{% static "blog/img/s.png" %}" alt="logo de l'ecole">
+        <h1 id="titre">COMPLEXE SCOLAIRE LA GRANDEUR</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url "blog:home" %}">Accueil</a></li>
+                <li><a href="{% url "blog:infos" %}">Informations</a></li>
+                <li><a href="{% url "blog:about" %}">À propos</a></li>
+                <li><a href="{% url "blog:contact" %}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    {% block content %}{% endblock %}
+
+    <footer>
+        <div class="footer-containe">
+          <div class="footer-section about">
+            <h2>A propos de nous</h2>
+            <p>Le Complexe Scolaire La Grandeur est dédiée à offrir une éducation de haute qualité dans un environnement stimulant et inclusif. Fondée en 2016, notre école a constamment évolué pour répondre aux besoins éducatifs de notre communauté.</p>
+          </div>
+          <div class="footer-section contacts">
+            <h2>Contact Us</h2>
+            <p>156, Av. du 30 juin, Mutoshi, C/MANIKA, Ville de Kolwezi, Pronvice du Lualaba</p>
+            <br>
+            <p>complexescolaire<br>lagrandeur01@gmail.com</p>
+            <br>
+            <p>+243 99 08 26 667</p>
+          </div>
+          <div class="footer-section links">
+            <h2>Liens rapides</h2>
+            <ul>
+              <li><a href="{% url "blog:home" %}">Accueil</a></li>
+              <li><a href="{% url "blog:about" %}">A propos</a></li>
+              <li><a href="team.html">Equipe</a></li>
+              <li><a href="{% url "blog:notes" %}">News</a></li>
+              <li><a href="#">Contacts</a></li>
+            </ul>
+          </div>
+          <div class="footer-section newsletter">
+            <h2>Newsletter</h2>
+            <form>
+              <input type="email" placeholder="Enter your email">
+              <button type="submit">Subscribe</button>
+            </form>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="https://x.com/home"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="https://www.youtube.com/@CSLaGrandeur"><i class="fab fa-youtube"></i></a>
+              <a href="https://www.instagram.com/csgrandeur"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-whatapp"></i></a>
+            </div>
+          </div>
+        </div>
+    </footer>
+
+    <script>
+        function openModal(imgElement) {
+            var modal = document.getElementById("modal");
+            var modalImg = document.getElementById("modalImage");
+            var captionText = document.getElementById("caption");
+    
+            modal.style.display = "block";
+            modalImg.src = imgElement.src;
+            captionText.innerHTML = imgElement.alt;
+        }
+    
+        function closeModal() {
+            var modal = document.getElementById("modal");
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>

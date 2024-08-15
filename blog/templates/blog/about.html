@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notre École</title>
+    <link rel="stylesheet" href=" {% static "bootstrap.min.css" %}">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: #f8f8f8;
+    padding: 10px;
+    border-bottom: 1px solid #3c3b3b;
+    box-shadow: 0 4px 8px 0 #191474b9;
+    transition: 0.3s;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+header img {
+    height: 100px; /* Ajustez la taille selon votre logo */
+    margin-right: 15px;
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+header h1::after {
+    content: '';
+    display: inline-block;
+    width: 2px;
+    height: 50px; /* Ajustez la hauteur selon vos besoins */
+    background-color: #333;
+    margin: 0 15px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 100px;
+    margin-right: 10px;
+}
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+
+nav ul li a:hover,
+nav ul li a:focus {
+    color: #ff9800;
+}
+
+main {
+    text-align: center;
+}
+
+section {
+    margin: 40px 0;
+    position: relative;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(transparent, rgba(255, 255, 255, 0.856));
+}
+
+section h2 {
+    margin-top: -60px;
+    font-size: 50px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+
+section p, section ul {
+    margin: 20px 50px;
+    text-align: center;
+    font-size: 20px;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.background-image-1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    clip-path: circle(40% at 10% 20%);
+    background: url('img/6.jpg') no-repeat center center;
+    background-size: cover;
+    z-index: -1; /* Pour que l'image soit en arrière-plan */
+    opacity: 30%;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{% static "blog/img/s.png" %}" alt="Logo de l'école">
+            <h1>COMPLEXE SCOLAIRE LA GRANDEUR</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{% url "blog:home" %}">Accueil</a></li>
+                <li><a href="#">Section</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Maternelle</a></li>
+                        <li><a href="#">Primaier</a></li>
+                        <li><a href="#">Secondaire</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Equipe</a></li>
+                <li><a href="#">Informations</a></li>
+                <li><a href="#">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="background-image-1">
+        <img src="{% static "blog/img/e.jpg" %}" alt="fond">
+
+    </div>
+    <main>
+<div class="container">
+
+        <section class="welcome">
+            <br>
+            <h2>BIENVENUE AU COMPLEXE SCOLAIRE LA GRANDEUR</h2>
+            <p>Notre école offre une éducation de qualité pour les élèves de tous âges, de la maternelle au secondaire. Nous nous engageons à fournir un environnement d'apprentissage stimulant et bienveillant.</p>
+        </section>
+        
+        <section class="mission">
+            <div class="image-container">
+                <img src="{% static "blog/img/secondaire/1 sc.png" %}" alt="Notre Mission">
+                <div class="gradient"></div>
+            </div>
+            <h2>Notre Mission</h2>
+            <p>Notre mission est de former des élèves autonomes, responsables et compétents, prêts à relever les défis de l'avenir. Nous mettons l'accent sur le développement académique, social et émotionnel de chaque élève.</p>
+        </section>
+        
+        <section class="values">
+            <div class="image-container">
+                <img src="{% static "blog/img/maternelle/3e mat.png" %}" alt="Nos Valeurs">
+                
+                <div class="gradient"></div>
+                <p>NOS VALEURS</p>
+            </div>
+            <h2>Nos Valeurs</h2>
+            <ul>
+                <li><strong>Respect:</strong> Nous encourageons le respect mutuel entre tous les membres de la communauté scolaire.</li>
+                <li><strong>Excellence:</strong> Nous visons l'excellence dans la production des jeunes compétents et compétitifs.</li>
+                <li><strong>Inclusivité:</strong> Nous valorisons la diversité et favorisons un environnement inclusif pour tous les élèves.</li>
+                <li><strong>Innovation:</strong> Nous encourageons l'innovation et la créativité dans l'apprentissage et l'enseignement.</li>
+            </ul>
+        </section>
+        
+        <section class="history">
+            <div class="image-container">
+                <img src="{% static "blog/img/secondaire/ecole.png" %}" alt="Notre Histoire">
+                <div class="gradient"></div>
+            </div>
+            <h2>Notre Histoire</h2>
+            <p>Elle a vue le jour au debut de l'année scolaire 2016-2017 et a été construite sur le fonds propres avec l'appui d'une institution bancaire de la place 
+                <p> Ses portes ont été ouvertes pour la premiere fois le 05 septembre 2016</p>
+                <p>Quoique jeune, le complexe scolaire La Grandeur s'est vu plébisciter à quatre reprises par</p>
+                <ul>
+                    <li><strong>Eben-ewer</strong>le 12-05-2016</li>
+                    <li><strong>Media store </strong>le 07-05-2017</li>
+                    <li><strong>Media store </strong>le 07-05-2017</li>
+                    <li><strong>Media store </strong>le 07-05-2017</li>
+                    <li><strong>Media store </strong>le 07-05-2017</li>
+                    <li><strong>Media store </strong>le 07-05-2017</li>
+                    <li><strong>Media store </strong>le 07-05-2017</li>
+
+                </ul>
+        </section>
+        
+        <section class="team">
+            <div class="image-container">
+                <img src="{% static "blog/img/primaire/eleves 1 annee4.png" %}" alt="Notre Équipe">
+                <div class="gradient"></div>
+            </div>
+            <h2>Notre Équipe</h2>
+            <p>Notre équipe est composée d'enseignants qualifiés et dévoués, passionnés par l'éducation et le bien-être de nos élèves. Chaque membre de notre personnel contribue à créer un environnement d'apprentissage positif et enrichissant.</p>
+        </section>
+        
+        <section class="facilities">
+            <div class="image-container">
+                <img src="{% static "blog/img/secondaire/sc3.png" %}" alt="Nos Installations">
+                <div class="gradient"></div>
+            </div>
+            <h2>Nos Installations</h2>
+            <p>Notre école dispose de nombreuses installations modernes, y compris des salles de classe bien équipées, des laboratoires de sciences, une bibliothèque, des installations sportives et des espaces dédiés aux activités artistiques et culturelles.</p>
+        </section>
+
+    
+    <section class="Devise scolaire">
+        <div class="image-container">
+            <img src="{% static "blog/img/secondaire/sc3.png" %}" alt="Nos Installations">
+            <div class="gradient"></div>
+        </div>
+        <h2>Notre Devise</h2>
+        <p>Discipline, Travail, Excellence.</p>
+    </section>
+</div>  
+</main>
+    <script>
+        // This script is for handling the dropdown menus
+document.addEventListener('DOMContentLoaded', function() {
+    var dropdowns = document.querySelectorAll('nav ul li');
+
+    dropdowns.forEach(function(dropdown) {
+        dropdown.addEventListener('mouseenter', function() {
+            var submenu = this.querySelector('.dropdown');
+            if (submenu) {
+                submenu.style.display = 'block';
+            }
+        });
+
+        dropdown.addEventListener('mouseleave', function() {
+            var submenu = this.querySelector('.dropdown');
+            if (submenu) {
+                submenu.style.display = 'none';
+            }
+        });
+    });
+});
+
+    </script>
+</body>
+</html>
+
+
+<!--
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>À propos de nous - Mon école</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <style>
+            .A_propos img {
+                margin-top: auto;
+                justify-items: center;
+                width: 100%;
+            }
+            .A_propos iframe{
+                margin-top: auto;
+                width:1020 ;
+                height: 315 ;
+                justify-items: center;
+            }
+            .A_propos {
+                padding: 20px;
+                background: #b4c9f867;
+                margin: 20px 0;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <img src="img/s.png" alt="logo de l'ecole">
+            <h1>COMPLEXE SCOLAIRE LA GRANDEUR</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="Information Officiel.html">Information Officiel</a></li>
+                    <li><a href="A_propos.html">À propos de nous</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <li><a href="Admin.html">Adn</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="ministerial-orders">
+            <strong>
+                <p>Arrêté Ministériel N°0288/CAB/MIN-ETP/JNT/GBM/BBL/2016 DU 17/10/2016</p>
+                <p>Arrêté Ministériel N°MINESP/CABIN/0362/2017 du 26/01/2017</p>
+                <p>PROVINCE DU LUALABA</p>
+                <p>VILLE DE KOLWEZI</p>
+            </strong>
+        </section>
+        <div class="background-image-1">
+            <img src="..." alt="fond">
+
+        </div>
+
+                <main>
+                    <section class="A_propos">
+                            <section class="intro">
+                                    <section class="highlights">
+                                        <h2>BIENVENUE</h2>
+                                    </section>
+                                <iframe width="560" height="315" src="img/VIDEO/MAG_1.mp4" frameborder="0" allowfullscreen></iframe>
+
+                                <p>Notre école offre une éducation de qualité pour les élèves de tous âges, de la maternelle au secondaire. Nous nous engageons à fournir un environnement d'apprentissage stimulant et bienveillant.</p>
+                            </section>
+
+                            <section class="mission">
+                                    <section class="highlights">
+                                        <h2>Notre Mission</h2>
+                                    </section>
+                                <img src="img/images (2).jpeg" alt="Mission">             
+                                <p>Notre mission est de former des élèves autonomes, responsables et compétents, prêts à relever les défis de l'avenir. Nous mettons l'accent sur le développement académique, social et émotionnel de chaque élève.</p>
+
+                            </section>
+
+                            <section class="values">
+                                    <section class="highlights">
+                                        <h2>Nos Valeurs</h2>
+                                    </section>
+                                <img src="img/images (4).jpeg" alt="Valeurs">
+                                <ul>
+                                    <li><strong>Respect:</strong> Nous encourageons le respect mutuel entre tous les membres de la communauté scolaire.</li>
+                                    <li><strong>Excellence:</strong> Nous visons l'excellence dans la production des jeunes competant et competitifs.</li>
+                                    <li><strong>Inclusivité:</strong> Nous valorisons la diversité et favorisons un environnement inclusif pour tous les élèves.</li>
+                                    <li><strong>Innovation:</strong> Nous encourageons l'innovation et la créativité dans l'apprentissage et l'enseignement.</li>
+                                </ul>
+
+                            </section>
+
+                            <section class="history">
+                                    <section class="highlights">
+                                        <h2>Notre Histoire</h2>
+                                    </section>
+                                <img src="img/images (1).jpeg" alt="Histoire">
+                                <p>Fondée en [année de fondation], notre école a une longue tradition d'excellence académique et de service à la communauté. Depuis nos débuts, nous avons évolué pour devenir une institution moderne tout en conservant nos valeurs fondamentales.</p>
+
+                            </section>
+                
+                            <section class="staff">
+                                    <section class="highlights">
+                                        <h2>Notre Equipe</h2>
+                                    </section>
+                                <img src="img/images (2).jpeg" alt="Équipe">
+                                <p>Notre équipe est composée d'enseignants qualifiés et dévoués, passionnés par l'éducation et le bien-être de nos élèves. Chaque membre de notre personnel contribue à créer un environnement d'apprentissage positif et enrichissant.</p>
+
+                            </section>
+            
+                            <section class="facilities">
+                                    <section class="highlights">
+                                        <h2>Nos Installations</h2>
+                                    </section>
+                                <img src="img/images.jpeg" alt="Installations">
+                                <p>Notre école dispose de nombreuses installations modernes, y compris des salles de classe bien équipées, des laboratoires de sciences, une bibliothèque, des installations sportives et des espaces dédiés aux activités artistiques et culturelles.</p>
+                
+                </section>
+
+                        </main>
+        
+                    <main>
+                        <section class="Devise">
+                            <section class="highlights">
+                                <h2>Notre Devise</h2>
+                                                 
+                        </section>
+                        <p>Nous sommes l'Excellence.</p>
+                        <!-- Ajouter plus de détails ici -->
+                         <br>
+                         <br>
+                         <br>
+                    </section>
+                </main>
+            </section>
+        <footer>
+            <p>156, Av. du 30 juin, Mutoshi, C/MANIKA, Ville de Kolwezi, Pronvice du Lualaba</p>
+            <p>Contact : +243 99 08 26 667</p>
+        </footer>
+    </body>
+</html>

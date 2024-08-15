@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page de Publication</title>
+    <link rel="stylesheet" href="./css styles/styles.css">
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    
+    #login-form, #publish-form {
+        margin: 20px auto;
+        width: 80%;
+        max-width: 600px;
+    }
+    
+    #login-form input, #publish-form input, #publish-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    
+    #login-form button, #publish-form button {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+    
+    #manage-posts {
+        margin-top: 20px;
+    }
+    
+    .publication {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 10px;
+        background-color: #f9f9f9;
+        position: relative;
+    }
+    
+    .publication img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .delete-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: #f44336;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+    </style>
+</head>
+<header>
+    <img src="img/s.png" alt="logo de l'ecole">
+    <h1 id="titre">COMPLEXE SCOLAIRE LA GRANDEUR</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="Infos.html">Informations</a></li>
+            <li><a href="A_propos.html">À propos</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+            <!-- Arrêtés ministériels -->
+    <section class="ministerial-orders">
+        <p><strong>Arrêté Ministériel N°0288/CAB/MIN-ETP/JNT/GBM/BBL/2016 DU 17/10/2016</strong></p>
+        <p><strong>Arrêté Ministériel N°MINESP/CABIN/0362/2017 du 26/01/2017</strong></p>
+        <p><strong>PROVINCE DU LUALABA</strong></p>
+        <p><strong>VILLE DE KOLWEZI</strong></p>
+    </section>
+    <div class="background-image-1">
+        <img src="img/secondaire/CG 1.png" alt="fond">
+
+    </div>
+<body>
+    <div id="login-form">
+        <h2>Connexion</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Nom d'utilisateur" required>
+            <input type="password" id="password" placeholder="Mot de passe" required>
+            <button type="submit">Se connecter</button>
+        </form>
+    </div>
+    
+    <div id="publish-form" style="display:none;">
+        <h2>Publier une Information</h2>
+        <form id="publicationForm">
+            <textarea id="message" placeholder="Écrivez votre message ici..." required></textarea>
+            <input type="file" id="photo" accept="image/*">
+            <button type="submit">Publier</button>
+        </form>
+        <div id="manage-posts">
+            <h3>Gérer les Publications</h3>
+            <!-- Liste des publications pour la gestion -->
+        </div>
+    </div>
+
+    <script src="./js/publish.js"></script>
+</body>
+</html>

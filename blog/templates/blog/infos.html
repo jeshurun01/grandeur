@@ -1,0 +1,32 @@
+{% extends "blog/layout.html" %}
+{% load static %}
+{% block title %}Publications de l'École{% endblock %}
+
+{% block content %}
+
+            <!-- Arrêtés ministériels -->
+    <section class="ministerial-orders">
+        <p><strong>Arrêté Ministériel N°0288/CAB/MIN-ETP/JNT/GBM/BBL/2016 DU 17/10/2016</strong></p>
+        <p><strong>Arrêté Ministériel N°MINESP/CABIN/0362/2017 du 26/01/2017</strong></p>
+        <p><strong>PROVINCE DU LUALABA</strong></p>
+        <p><strong>VILLE DE KOLWEZI</strong></p>
+    </section>
+    <div class="background-image-1">
+        <img src="{% static "blog/img/secondaire/CG 1.png" %}" alt="fond">
+
+    </div>
+
+    <div class="note animated">
+        <div id="notifications">
+            <!-- Les notifications seront insérées ici par JavaScript -->
+             {% for notification in notifications %}
+                <div class="notification">
+                    <time>{{ notification.created }}</time>
+                    <p>{{ notification.content }}</p>
+                </div>
+             {% endfor %}
+        </div>
+    </div>
+    {% comment %} <script src="{% static "blog/js/notifications.js" %}"></script> {% endcomment %}
+
+{% endblock %}
