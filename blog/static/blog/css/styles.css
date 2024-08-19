@@ -86,7 +86,7 @@ body {
     /* Ajoutez ceci dans vos styles CSS */
 
     main {
-        margin: 20px;
+        margin: 0px;
     }
 
     form {
@@ -264,7 +264,7 @@ header nav ul li a:hover {
     display: flex;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.8);
-    padding: 10px;
+    padding: 5px;
     border-radius: 10px;
     position: relative;
     gap: 10px; /* Espace entre l'image et le texte */
@@ -572,8 +572,8 @@ label {
 
 /* styles.css instagrame publication*/
 .instagram-embed {
-    margin: 20px auto;
-    padding: 10px;
+    margin: 5px auto;
+    padding: 5px;
     max-width: 500px; /* Ajuster la largeur si nécessaire */
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -724,7 +724,7 @@ footer {
     }
 
     section {
-        padding: 10px;
+        padding: 5px;
     }
 } 
 
@@ -1059,8 +1059,8 @@ footer {
     }
 
     .carousel {
-        width: 450px;
-        height: 300px;
+        width: 290px;
+        height: 220px;
         transition: 0.3s;
     }
 }
