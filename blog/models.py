@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Notification(models.Model):
-    content = models.CharField(max_length=500)
+    content = models.TextField()
     created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

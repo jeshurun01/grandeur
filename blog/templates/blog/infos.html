@@ -22,7 +22,7 @@
              {% for notification in notifications %}
                 <div class="notification">
                     <time>{{ notification.created }}</time>
-                    <p>{{ notification.content }}</p>
+                    <textarea rows="6" cols="40" disabled>{{ notification.content }}</textarea>
                 </div>
              {% endfor %}
         </div>
