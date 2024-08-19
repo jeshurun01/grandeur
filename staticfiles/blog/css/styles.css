@@ -116,6 +116,11 @@ body {
     .info-item .info-content {
         margin-top: 5px;
     }
+
+    textarea {
+        background-color: white;
+        border: none;
+    }
     
 /*.background-ima{
     position: fixed;
@@ -133,6 +138,7 @@ body {
 header {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     background-color: #f8f8f8;
     padding: 10px;
     border-bottom: 1px solid #ccc;
@@ -144,37 +150,77 @@ header {
 }
 
 header img {
-    height: 100px; /* Ajustez la taille selon votre logo */
+    height: 200px; /* Ajustez la taille selon votre logo */
     margin-right: 15px;
+    transition: 0.3s;
 }
 
 header h1 {
-    font-size: 24px;
+    font-size: 35px;
     margin: 0;
-    display: flex;
-    align-items: center;
+    text-align: left;
 }
 
-header h1::after {
-    content: '';
-    display: inline-block;
-    width: 2px;
-    height: 50px; /* Ajustez la hauteur selon vos besoins */
-    background-color: #333;
-    margin: 0 15px;
+header h1 span {
+    color: red;
+    white-space: nowrap;
 }
 
-nav ul {
+header .separator {
+    border-left: 2px solid black; /* Ligne verticale */
+    height: 100px; /* Hauteur de la ligne */
+    margin: 0 15px; /* Espacement autour de la ligne */
+}
+
+.hamburger {
+    display: none;
+    position: fixed;
+    float: left;
+    left: 10px;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 2;
+
+    background-color: whitesmoke;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: blue;
+    margin: 2px 0;
+    transition: 0.4s;
+}
+
+header nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex; /* Aligne les liens horizontalement */
-    gap: 10px; /* Espace entre les liens */
 }
 
-nav li {
-    margin: 0;
+header nav li {
+    margin-left: 15px;
 }
+
+header nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    white-space: nowrap;
+    color: #333;
+    padding: 5px 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header nav ul li a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
 
 /* Arrêtés ministériels */
 .ministerial-orders {
@@ -194,20 +240,6 @@ nav li {
 .ministerial-orders p {
     font-size: 18px;
     margin: 5px 0;
-}
-
-nav a {
-    text-decoration: none;
-    color: #333;
-    padding: 5px 10px;
-    border: 1px solid #333;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-nav a:hover {
-    background-color: #333;
-    color: #fff;
 }
 
 /* Contenu principal */
@@ -351,7 +383,8 @@ nav a:hover {
 
 .carousel {
     overflow: hidden;
-    width: 80%;
+    width: 600px;
+    height: 350px;
     margin: 20px auto;
 }
 
@@ -909,4 +942,125 @@ footer {
 
 .option:nth-child(3) {
     animation-delay: 0.9s;
+}
+
+
+@media (max-width: 1000px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+
+    header img {
+        height: 250px; /* Agrandit le logo sur mobile */
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    header h1 {
+        font-size: 30px;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+    header .separator{
+        display: none;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: center; /* Centre les menus horizontalement */
+        width: 93%;
+        margin: auto;
+    }
+
+    .carousel {
+        width: 500px;
+        height: 320px;
+        transition: 0.3s;
+    }
+}
+
+/* Responsivité pour les téléphones (max-width: 600px) */
+@media screen and (max-width: 600px) {
+    .sections {
+        width: 100%; /* Utilisation de toute la largeur disponible sur les téléphones */
+    }
+
+    .section {
+        flex-direction: column; /* Placer la photo en haut */
+        align-items: center; /* Centrer tous les éléments */
+    }
+
+    .section img {
+        width: 100%; /* L'image prend toute la largeur */
+        height: auto; /* Hauteur automatique pour conserver le ratio de l'image */
+        margin-right: 0; /* Supprimer l'espacement latéral */
+        border-radius: 10px 10px 0 0; /* Coin arrondi uniquement en haut */
+    }
+
+    .section div {
+        text-align: center; /* Centrer le texte pour une meilleure présentation */
+    }
+
+    .section-button {
+        bottom: 20px; /* Ajuster l'espacement en bas pour le bouton */
+        position: static; /* Le bouton ne sera plus en position absolue */
+        margin-top: 10px; /* Ajouter un espacement au-dessus du bouton */
+    }
+
+    .image-wrapper {
+        display: none; /* Cache l'image sur les petits écrans */
+    }
+
+}
+
+@media (max-width: 500px) {
+    /* header img {
+        height: 100px; /* Ajustez la taille selon votre logo
+        margin-right: 15px;
+        transition: 0.3s;
+    } */
+
+    header h1 {
+        font-size: 24px;
+        margin: 0;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    header .separator{
+        display: none;
+    }
+
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #a1a0a0e7;
+        position: fixed;
+        float: left;
+        left: 45px;
+        top: 10px;
+        width: 200px;
+        text-align: center;
+        border-radius: 10px;
+    }
+
+    header nav ul li {
+        margin: 15px 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .show-menu {
+        display: flex;
+    }
+
+    .carousel {
+        width: 450px;
+        height: 300px;
+        transition: 0.3s;
+    }
 }
