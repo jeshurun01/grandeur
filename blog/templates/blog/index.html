@@ -3,138 +3,153 @@
 {% block title %}Complexe_scolaire_la_grandeur{% endblock %}
 
 {% block content %}
-
-    <!-- Arrêtés ministériels -->
-    <section class="ministerial-orders animated">
-        <p><strong>Arrêté Ministériel N°0288/CAB/MIN-ETP/JNT/GBM/BBL/2016 DU 17/10/2016</strong></p>
-        <p><strong>Arrêté Ministériel N°MINESP/CABIN/0362/2017 du 26/01/2017</strong></p>
-        <p><strong>PROVINCE DU LUALABA</strong></p>
-        <p><strong>VILLE DE KOLWEZI</strong></p>
-    </section>
-    <div class="background-image-1">
-        <img src="{% static "blog/img/secondaire/CG 1.png" %}" alt="fond">
-    </div>
-    <section class="highlights animated">
-        <h2>NOS SECTIONS</h2>
-    </section>
-    <main>
-        <div class="content-wrapper animated">
-            <section class="sections">
-                <div class="section">
-                    <img src="{% static "blog/img/maternelle/1mat.png" %}" alt="Maternelle">
-                    <div>
-                        <h2>Maternelle</h2>
-                        <p>La section maternelle de notre école offre un environnement chaleureux et stimulant pour les jeunes enfants. </p>
-                        <a href="#"><button class="section-button">Consulter</button></a>
-
-                    </div>
-                </div>
-                <div class="section">
-                    <img src="{% static "blog/img/primaire/eleves 1 annee 1.png" %}" alt="Primaire">
-                    <div>
-                        <h2>Primaire</h2>
-                        <p>La section primaire de notre école est dédiée à fournir une éducation de qualité qui pose les bases solides pour l'avenir de nos élèves.</p>
-                        <a href="#"><button class="section-button">Consulter</button></a>
-                    </div>
-                </div>
-                <div class="section">
-                    <img src="{% static "blog/img/secondaire/CS.png" %}" alt="Secondaire">
-                    <div>
-                        <h2>Secondaire</h2>
-                        <p>Notre section secondaire propose deux filières distinctes : <strong>l'enseignement Général</strong> et <strong>l'enseignement Technique,</strong> afin de répondre aux aspirations et aux talents de chaque élève.</p>
-                        <a href="#"><button class="section-button">Consulter</button></a>
-                    </div>
-                </div>
-            </section>
+    <section class="flex gap-4 items-center justify-center flex-col lg:flex-row my-8">
+        <div class="lg:w-3xl flex flex-col gap-4 bg-white rounded-lg shadow-md hover:shadow-xl p-8 mx-auto my-8">
+            <h2 class="text-2xl">🎓 Bienvenue sur le site du Complexe Scolaire <span class="text-red-500">La Grandeur</span></h2>
+            <p>Nous sommes ravis de vous accueillir sur notre site officiel. Notre école est dédiée à offrir une éducation de qualité dans un environnement stimulant et inclusif.</p>
+            <p>Le Complexe Scolaire La Grandeur accompagne les élèves de la maternelle au secondaire dans un cadre propice à l’apprentissage, à la discipline et à la réussite.</p>
+            <p>À travers ce site, vous pouvez :</p>
+            <ul class="pl-6 list-disc">
+                <li>
+                    Découvrir nos sections et nos programmes,
+                </li>
+                <li>
+                    Suivre nos actualités et annonces officielles,
+                </li>
+                <li>
+                    Accéder aux informations utiles et aux galeries de photos.
+                </li>
+            </ul>
             
-            <div class="image-wrapper">
-                <img src="{% static "blog/img/s.png" %}" alt="École">
-            </div>
+            <p>
+                Nous vous remercions de votre confiance et restons engagés pour une éducation de qualité.
+            </p>
+            <p>La direction</p>
+        </div>
+        <div class="md:h-100 md:w-sm mx-auto">
+            <img class="md:w-sm w-64" src="{% static 'blog/img/s.png' %}" alt="École">
+        </div>
+    </section>
+    <section class="flex justify-center items-center my-2 lg:h-64">
+        <h2 class="p-4 font-semibold md:text-4xl text-xl text-gray-600">NOS SECTIONS</h2>
+    </section>
+    <section class="grid lg:grid-cols-3 grid-cols-1 lg:gap-8 gap-4">
+        <div class="shadow-md hover:shadow-xl transition-shadow duration-300 rounded-lg overflow-hidden bg-white">
+            <img class="h-64 w-full object-cover hover:scale-105 transition-transform duration-300" src="{% static 'blog/img/maternelle/1mat.png' %}" alt="Maternelle">
+            <div class="p-4">
+                <h2 class="font-bold py-2 text-red-500">Maternelle</h2>
+                <p class="py-2 min-h-24">La section maternelle de notre école offre un environnement chaleureux et stimulant pour les jeunes enfants. </p>
+                <button class="p-2 bg-red-500 text-white rounded hover:bg-red-600 hover:shadow-md active:bg-red-700">Consulter</button>
 
+            </div>
+        </div>
+        <div class="shadow-md hover:shadow-xl transition-shadow duration-300 rounded-lg overflow-hidden bg-white">
+            <img class="h-64 w-full object-cover hover:scale-105 transition-transform duration-300" src="{% static 'blog/img/primaire/eleves 1 annee 1.png' %}" alt="Primaire">
+            <div class="p-4">
+                <h2 class="font-bold py-2 text-red-500">Primaire</h2>
+                <p class="py-2 min-h-24">La section primaire de notre école est dédiée à fournir une éducation de qualité qui pose les bases solides pour l'avenir de nos élèves.</p>
+                <button class="p-2 bg-red-500 text-white rounded hover:bg-red-600 hover:shadow-md active:bg-red-700">Consulter</button>
+            </div>
+        </div>
+        <div class="shadow-md hover:shadow-xl transition-shadow duration-300 rounded-lg overflow-hidden bg-white">
+            <img class="h-64 w-full object-cover hover:scale-105 transition-transform duration-300" src="{% static 'blog/img/secondaire/CS.png' %}" alt="Secondaire">
+            <div class="p-4">
+                <h2 class="font-bold py-2 text-red-500">Secondaire</h2>
+                <p class="py-2 min-h-24">Notre section secondaire propose deux filières distinctes : <strong>l'enseignement Général</strong> et <strong>l'enseignement Technique,</strong> afin de répondre aux aspirations et aux talents de chaque élève.</p>
+                <button class="p-2 bg-red-500 text-white rounded hover:bg-red-600 hover:shadow-md active:bg-red-700">Consulter</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section Nos Moments Forts -->
+    <section class="flex flex-col lg:flex-row items-center gap-4 my-4 lg:h-screen">
+        <iframe 
+            src="https://www.youtube.com/embed/rvrdaj8wrkQ" 
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen
+            class="md:h-128 w-full mx-auto rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+            >
+        </iframe>
+    </section>
+
+    <!-- Aperçu des galeries par section -->
+    <section class="flex flex-col items-center">
+        <h2 class="font-semibold md:text-4xl text-xl text-gray-600 mx-auto my-8 uppercase">Galeries par section</h2>
+        <div class="md:h-screen flex flex-col items-center justify-center">
+            <h3 class="mx-auto uppercase text-2xl p-4 mb-8">Maternelle</h3>
+            <div class="grid md:grid-cols-3 md:gap-8 gap-4 items-center">
+                <img class=" w-full object-cover hover:scale-105 shadow-md hover:shadow-xl transition-shadow transition-transform duration-300 rounded-lg" src="{% static 'blog/img/maternelle/12mat.png' %}" alt="Maternelle 1" onclick="openModal(this)">
+                <img class=" w-full object-cover hover:scale-105 shadow-md hover:shadow-xl transition-shadow transition-transform duration-300 rounded-lg" src="{% static 'blog/img/maternelle/1mat.png' %}" alt="Maternelle 2" onclick="openModal(this)">
+                <img class=" w-full object-cover hover:scale-105 shadow-md hover:shadow-xl transition-shadow transition-transform duration-300 rounded-lg" src="{% static 'blog/img/maternelle/3e mat.png' %}" alt="Maternelle 2" onclick="openModal(this)">
+                <img class=" w-full object-cover hover:scale-105 shadow-md hover:shadow-xl transition-shadow transition-transform duration-300 rounded-lg" src="{% static 'blog/img/maternelle/mat22.png' %}" alt="Maternelle 2" onclick="openModal(this)">
+                <img class=" w-full object-cover hover:scale-105 shadow-md hover:shadow-xl transition-shadow transition-transform duration-300 rounded-lg" src="{% static 'blog/img/maternelle/presentation.png' %}" alt="Maternelle 2" onclick="openModal(this)">
+                <img class=" w-full object-cover hover:scale-105 shadow-md hover:shadow-xl transition-shadow transition-transform duration-300 rounded-lg" src="{% static 'blog/img/maternelle/3e mat.png' %}" alt="Maternelle 2" onclick="openModal(this)">
+            </div>
         </div>
 
-        <!-- Section Nos Moments Forts -->
-        <section class="highlights">
-            <h2>Nous</h2>
-            <div class="carousel">
-                <iframe 
-                    width="100%" height="100%"
-                    src="https://www.youtube.com/embed/rvrdaj8wrkQ" 
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen
-                    >
-                </iframe>
+        <div class="md:h-screen flex flex-col items-center justify-center">
+            <h3 class="mx-auto uppercase text-2xl p-4 mb-8">Primaire</h3>
+            <div class="grid md:grid-cols-3 md:gap-8 gap-4 items-center">
+                <img class=" w-full object-cover hover:scale-105 shadow-md hover:shadow-xl transition-shadow transition-transform duration-300 rounded-lg" src="{% static 'blog/img/primaire/eleves 1 annee 1.png' %}" alt="Primaire 1"onclick="openModal(this)">
+                <img class=" w-full object-cover hover:scale-105 shadow-md hover:shadow-xl transition-shadow transition-transform duration-300 rounded-lg" src="{% static 'blog/img/primaire/eleves 1 annee 7.png' %}" alt="Primaire 1" onclick="openModal(this)">
+                <img class=" w-full object-cover hover:scale-105 shadow-md hover:shadow-xl transition-shadow transition-transform duration-300 rounded-lg" src="{% static 'blog/img/primaire/eleves 1 annee.png' %}" alt="Primaire 2" onclick="openModal(this)">
+                <img class=" w-full object-cover hover:scale-105 shadow-md hover:shadow-xl transition-shadow transition-transform duration-300 rounded-lg" src="{% static 'blog/img/primaire/eleves 1 annee3.png' %}" alt="Primaire 2" onclick="openModal(this)">
+                <img class=" w-full object-cover hover:scale-105 shadow-md hover:shadow-xl transition-shadow transition-transform duration-300 rounded-lg" src="{% static 'blog/img/primaire/eleves 1 annee4.png' %}" alt="Primaire 2" onclick="openModal(this)">
+                <img class=" w-full object-cover hover:scale-105 shadow-md hover:shadow-xl transition-shadow transition-transform duration-300 rounded-lg" src="{% static 'blog/img/primaire/eleves 1 annee5.png' %}" alt="Primaire 2" onclick="openModal(this)">
             </div>
-        </section>
+        </div>
 
-        <!-- Aperçu des galeries par section -->
-        <section class="gallery-previews">
-            <h2>Galeries par section</h2>
-            <div class="gallery-section">
-                <h3>Maternelle</h3>
-                <img src="{% static "blog/img/maternelle/12mat.png" %}" alt="Maternelle 1" onclick="openModal(this)">
-                <img src="{% static "blog/img/maternelle/1mat.png" %}" alt="Maternelle 2" onclick="openModal(this)">
-                <img src="{% static "blog/img/maternelle/3e mat.png" %}" alt="Maternelle 2" onclick="openModal(this)">
-                <img src="{% static "blog/img/maternelle/mat22.png" %}" alt="Maternelle 2" onclick="openModal(this)">
-                <img src="{% static "blog/img/maternelle/presentation.png" %}" onclick="openModal(this)">
-                <img src="{% static "blog/img/maternelle/3e mat.png" %}" alt="Maternelle 2" onclick="openModal(this)">
-            </div>
+        <div class="md:h-screen flex flex-col items-center justify-center">
+            <h3 class="mx-auto uppercase text-2xl p-4 mb-8">Secondaire</h3>
+            <div class="grid md:grid-cols-3 md:gap-8 gap-4 items-center">
+                <img class=" w-full object-cover hover:scale-105 shadow-md hover:shadow-xl transition-shadow transition-transform duration-300 rounded-lg" src="{% static 'blog/img/secondaire/1 sc.png' %}" alt="Secondaire 1" onclick="openModal(this)">
+                <img class=" w-full object-cover hover:scale-105 shadow-md hover:shadow-xl transition-shadow transition-transform duration-300 rounded-lg" src="{% static 'blog/img/secondaire/CG 1.png' %}" alt="Secondaire 2" onclick="openModal(this)">
+                <img class=" w-full object-cover hover:scale-105 shadow-md hover:shadow-xl transition-shadow transition-transform duration-300 rounded-lg" src="{% static 'blog/img/secondaire/cg 4.png' %}" alt="Secondaire 2" onclick="openModal(this)">
+                <img class=" w-full object-cover hover:scale-105 shadow-md hover:shadow-xl transition-shadow transition-transform duration-300 rounded-lg" src="{% static 'blog/img/secondaire/CS.png' %}" alt="Secondaire 2" onclick="openModal(this)">
+                <img class=" w-full object-cover hover:scale-105 shadow-md hover:shadow-xl transition-shadow transition-transform duration-300 rounded-lg" src="{% static 'blog/img/secondaire/MG.png' %}" alt="Secondaire 2" onclick="openModal(this)">
+                <img class=" w-full object-cover hover:scale-105 shadow-md hover:shadow-xl transition-shadow transition-transform duration-300 rounded-lg" src="{% static 'blog/img/secondaire/sc3.png' %}" alt="Secondaire 2" onclick="openModal(this)">
+                </div>  
+        </div>
 
-            <div class="gallery-section">
-                <h3>Primaire</h3>
-                <img src="{% static "blog/img/primaire/eleves 1 annee 1.png" %}" alt="Primaire 1"onclick="openModal(this)">
-                <img src="{% static "blog/img/primaire/eleves 1 annee 7.png" %}" alt="Primaire 1" onclick="openModal(this)">
-                <img src="{% static "blog/img/primaire/eleves 1 annee.png" %}" alt="Primaire 2" onclick="openModal(this)">
-                <img src="{% static "blog/img/primaire/eleves 1 annee3.png" %}" alt="Primaire 2" onclick="openModal(this)">
-                <img src="{% static "blog/img/primaire/eleves 1 annee4.png" %}" alt="Primaire 2" onclick="openModal(this)">
-                <img src="{% static "blog/img/primaire/eleves 1 annee5.png" %}" alt="Primaire 2" onclick="openModal(this)">
-            </div>
-
-            <div class="gallery-section">
-                <h3>Secondaire</h3>
-                <img src="{% static "blog/img/secondaire/1 sc.png" %}" alt="Secondaire 1"onclick="openModal(this)">
-                <img src="{% static "blog/img/secondaire/CG 1.png" %}" alt="Secondaire 2"onclick="openModal(this)">
-                <img src="{% static "blog/img/secondaire/cg 4.png" %}" alt="Secondaire 2"onclick="openModal(this)">
-                <img src="{% static "blog/img/secondaire/CS.png" %}" alt="Secondaire 2"onclick="openModal(this)">
-                <img src="{% static "blog/img/secondaire/MG.png" %}" alt="Secondaire 2"onclick="openModal(this)">
-                <img src="{% static "blog/img/secondaire/sc3.png" %}" alt="Secondaire 2"onclick="openModal(this)">
-            </div>
-
-            <!-- Modal pour l'affichage en plein écran -->
+        <!-- Modal pour l'affichage en plein écran -->
+        <!--
             <div id="modal" class="modal" onclick="closeModal()">
                 <span class="close">&times;</span>
                 <img class="modal-content" id="modalImage">
                 <div id="caption"></div>
             </div>
-
-            <!-- integration facebook-->
+        -->
+            
+        <!-- integration facebook-->
+         <!--
             <div class="facebook-plugin">
                 <div id="fb-root"></div>
                 <script async defer crossorigin="anonymous" src="https://www.youtube.com/@CSLaGrandeur" nonce="oG8N1yNJ"></script>
                 <div class="fb-page" 
-                        data-href="https://www.youtube.com/@CSLaGrandeur" 
-                        data-tabs="timeline" 
-                        data-width="340" 
-                        data-height="500" 
-                        data-small-header="false" 
-                        data-adapt-container-width="true" 
-                        data-hide-cover="false" 
-                        data-show-facepile="true">
-                    <blockquote cite="https://www.youtube.com/@CSLaGrandeur" class="fb-xfbml-parse-ignore">
-                        <a href="https://www.youtube.com/@CSLaGrandeur">Complexe Scolaire la Grandeur</a>
-                    </blockquote>
-                </div>
+                data-href="https://www.youtube.com/@CSLaGrandeur" 
+                data-tabs="timeline" 
+                data-width="340" 
+                data-height="500" 
+                data-small-header="false" 
+                data-adapt-container-width="true" 
+                data-hide-cover="false" 
+                data-show-facepile="true">
+                <blockquote cite="https://www.youtube.com/@CSLaGrandeur" class="fb-xfbml-parse-ignore">
+                    <a href="https://www.youtube.com/@CSLaGrandeur">Complexe Scolaire la Grandeur</a>
+                </blockquote>
             </div>
-            
-            <!-- Exemple d'intégration d'une publication Instagram -->
-
+        </div>
+        -->
+        
+        <!-- Exemple d'intégration d'une publication Instagram -->
+        <!--
             <div class="instagram-embed">
                 <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/csgrandeur" data-instgrm-version="13"></blockquote>
                 <script async defer src="//www.instagram.com/embed.js"></script>
             </div>
-
-        </section>
-    </main>
+        -->
+            
+    </section>
 
 {% endblock %}

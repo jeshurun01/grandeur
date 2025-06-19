@@ -5,28 +5,20 @@
 {% block content %}
 
             <!-- Arrêtés ministériels -->
-    <section class="ministerial-orders">
-        <p><strong>Arrêté Ministériel N°0288/CAB/MIN-ETP/JNT/GBM/BBL/2016 DU 17/10/2016</strong></p>
-        <p><strong>Arrêté Ministériel N°MINESP/CABIN/0362/2017 du 26/01/2017</strong></p>
-        <p><strong>PROVINCE DU LUALABA</strong></p>
-        <p><strong>VILLE DE KOLWEZI</strong></p>
-    </section>
-    <div class="background-image-1">
-        <img src="{% static "blog/img/secondaire/CG 1.png" %}" alt="fond">
-
-    </div>
-
-    <div class="note animated">
-        <div id="notifications">
-            <!-- Les notifications seront insérées ici par JavaScript -->
-             {% for notification in notifications %}
-                <div class="notification">
-                    <time>{{ notification.created }}</time>
-                    <textarea rows="6" cols="40" disabled>{{ notification.content }}</textarea>
-                </div>
-             {% endfor %}
+    <section class="flex lg:flex-row flex-col justify-center gap-4 my-8 items-center w-full">
+        <div class="background-image-1">
+            <img class="lg:w-4xl w-full" src="{% static 'blog/img/secondaire/CG 1.png' %}" alt="fond">
         </div>
-    </div>
-    {% comment %} <script src="{% static "blog/js/notifications.js" %}"></script> {% endcomment %}
+        <div class="max-lg:w-full">
+            {% for notification in notifications %}
+            <div class="flex flex-col gap-2 p-4 bg-white shadow-md hover:shadow-xl transition-shadow duration-300 rounded-lg mb-4 lg:w-xl w-full">
+                <time class="text-sm text-gray-500">{{ notification.created }}</time>
+                <textarea class="resize-none" rows="4" disabled>{{ notification.content }}</textarea>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    {% comment %} <script src="{% static 'blog/js/notifications.js' %}"></script> {% endcomment %}
 
 {% endblock %}
