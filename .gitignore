@@ -1,0 +1,3 @@
+.venv/
+node_nodules/
+db.sqlite3

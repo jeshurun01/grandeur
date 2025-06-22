@@ -2,21 +2,24 @@
 {% load static %}
 {% block title %}Contact mon ecole{% endblock %}
 {% block content %}    
-    <section class="flex md:flex-row flex-col gap-4 items-center justify-center my-8">
-        <div>
-            <img class="md:w-100 w-48" src="{% static 'blog/img/s.png' %}" alt="Logo du site">
-        </div>
-        <form action="/contact/" method="POST" class="flex flex-col gap-4">
-            {% csrf_token %}
-            {{ form }}
-
-            <input class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded" type="submit" value="Submit">
-            <p class="text-gray-500">Contact number: +243 99 08 26 667</p>
-        </form>
-    </section>
-    <div>
-        <iframe class="w-full h-100 my-8 shadow-md hover:shadow-xl transition-shadow duration-300 rounded-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7840.891689231075!2d25.510016649530026!3d-10.700053587831976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1979e5469c2f1dd3%3A0xff6ebecf1295479f!2sComplexe%20Scolaire%20La%20GRANDEUR!5e0!3m2!1sfr!2scd!4v1721424661439!5m2!1sfr!2scd" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
+    <section class="py-8">
+        <div class="container mx-auto flex md:flex-row flex-col gap-4 items-center justify-center my-8">
+            <div>
+                <img class="md:w-100 w-48" src="{% static 'blog/img/s.png' %}" alt="Logo du site">
+            </div>
+            <form action="{% url 'blog:contact' %}" method="POST" class="flex flex-col gap-4">
+                {% csrf_token %}
+                {{ form }}
     
+                <input class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded" type="submit" value="Submit">
+                <p class="text-gray-500">Contact number: +243 99 08 26 667</p>
+            </form>
+        </div>
+    </section>
+    <section class="py-8">
+        <div class="container mx-auto">
+            <iframe class="w-full h-100 my-8 shadow-md hover:shadow-xl transition-shadow duration-300 rounded-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7840.891689231075!2d25.510016649530026!3d-10.700053587831976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1979e5469c2f1dd3%3A0xff6ebecf1295479f!2sComplexe%20Scolaire%20La%20GRANDEUR!5e0!3m2!1sfr!2scd!4v1721424661439!5m2!1sfr!2scd" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
 
 {% endblock %}
