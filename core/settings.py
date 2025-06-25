@@ -26,10 +26,10 @@ SECRET_KEY = "django-insecure-hk0tul+p(5jg+a0aqqc)=ouz#fau!z9ab^$vip@e_6ll8r_eii
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'IntelloJ.pythonanywhere.com', 
+    'IntelloJ.pythonanywhere.com',
+    'groupelagrandeur.com',
     '127.0.0.1', 
     '0.0.0.0',
-    '192.168.20.242'
     ]
 
 
@@ -130,6 +130,11 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+# Media files (User-uploaded content)
+MEDIA_URL = "media/"
+MEDIA_ROOT = BASE_DIR / 'media'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
